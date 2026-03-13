@@ -8,15 +8,12 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$1
     nginx.ingress.kubernetes.io/enable-cors: "true"
-    nginx.ingress.kubernetes.io/cors-allow-origin: "https://example.com"
 spec:
   tls:
     - hosts:
-        - example.com
       secretName: gitops-be-tls
   rules:
-    - host: example.com
-      http:
+    - http:
         paths:
           - path: /api/v1/(.*)
             pathType: ImplementationSpecific

@@ -6,23 +6,27 @@ resources:
 - secret.yaml
 - ../../../base/api
 
-patches:
-  - target:
-      kind: Ingress
-      name: reservation-be-ingress
-    patch: |
-      - op: replace
-        path: /spec/tls/0/hosts/0
-        value: reservation-dev.scg.skku.ac.kr
       
-      - op: replace
-        path: /spec/rules/0/host
-        value: reservation-dev.scg.skku.ac.kr
 
-      - op: replace
-        path: /metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin
-        value: https://reservation-dev.scg.skku.ac.kr
+patches:
+- patch: |
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: reservation-dev.scg.skku.ac.kr
+
+    - op: replace
+      path: /spec/rules/0/host
+      value: reservation-dev.scg.skku.ac.kr
+
+    - op: replace
+      path: /metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin
+      value: https://reservation-dev.scg.skku.ac.kr
+  target:
+    kind: Ingress
+    name: reservation-be-ingress
 
 images:
 - name: scgskku/reservation-be
   newName: scgskku/reservation-be-dev
+- name: scgskku/reservation-be-dev
+  newTag: c2bc568078a18dbe916075fc5be9e09418e9f2e2-23037437972-2

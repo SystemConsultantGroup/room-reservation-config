@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: shortener-qa
+resources:
+- namespace.yaml
+- secret.yaml
+- ../../../base/api
+
+patches:
+  - target:
+      kind: Ingress
+      name: reservation-be-ingress
+    patch: |
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: reservation-dev.scg.skku.ac.kr
+      
+      - op: replace
+        path: /spec/rules/0/host
+        value: reservation-dev.scg.skku.ac.kr
+
+      - op: replace
+        path: /metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin
+        value: https://reservation-dev.scg.skku.ac.kr
+
+images:
+- name: scgskku/reservation-be
+  newName: scgskku/reservation-be-dev

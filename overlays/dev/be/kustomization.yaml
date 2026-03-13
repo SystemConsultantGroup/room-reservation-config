@@ -4,7 +4,7 @@ namespace: shortener-qa
 resources:
 - namespace.yaml
 - secret.yaml
-- ../../../base/api
+- ../../../base/be
 
 patches:
   - target:

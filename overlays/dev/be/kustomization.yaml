@@ -26,6 +26,8 @@ resources:
 
 
 
+
+
 patches:
 - patch: |
     - op: replace
@@ -47,4 +49,4 @@ images:
 - name: scgskku/reservation-be
   newName: scgskku/reservation-be-dev
 - name: scgskku/reservation-be-dev
-  newTag: 5a9dd5686849f72bc92cd3110e9a3e121531afdc-23182725704-1
+  newTag: 1dd4f3cb5fce6b08e753b1ab69ecd2c8576a4780-23183440267-1

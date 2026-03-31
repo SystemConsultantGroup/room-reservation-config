@@ -17,7 +17,7 @@ patches:
 
     - op: replace
       path: /metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin
-      value: https://reservation-dev.scg.skku.ac.kr
+      value: "https://reservation-dev.scg.skku.ac.kr, https://api.reservation-dev.scg.skku.ac.kr"
   target:
     kind: Ingress
     name: reservation-be-ingress

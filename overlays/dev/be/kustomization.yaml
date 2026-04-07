@@ -5,6 +5,8 @@ resources:
 - secret.yaml
 - ../../../base/be
 
+
+
 patches:
 - patch: |
     - op: replace
@@ -26,4 +28,4 @@ images:
 - name: scgskku/reservation-be
   newName: scgskku/reservation-be-dev
 - name: scgskku/reservation-be-dev
-  newTag: 774c536cbbb4fab4ed94f24cb0b598f9ed2b0902-23785800254-1
+  newTag: 49870389a1d19cafec78b06292be707bfcc2bd20-24071752289-1

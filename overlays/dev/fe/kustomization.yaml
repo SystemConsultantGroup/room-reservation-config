@@ -20,6 +20,7 @@ resources:
 
 
 
+
 patches:
 - patch: |
     - op: replace
@@ -37,4 +38,4 @@ images:
 - name: scgskku/reservation-fe
   newName: scgskku/reservation-fe-dev
 - name: scgskku/reservation-fe-dev
-  newTag: bbf3354e7b2d1a7bd552989ada53553f187ea8a7-24128017562-1
+  newTag: b629e497d0171355cbf99b81e3d442931aed9ea3-24132604369-1

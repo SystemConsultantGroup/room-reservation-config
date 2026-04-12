@@ -19,5 +19,7 @@ patches:
     kind: Ingress
     name: reservation-fe-ingress
 images:
+- name: scgskku/reservation-fe
+  newName: scgskku/reservation-fe-prod
 - name: scgskku/reservation-fe-prod
   newTag: eebb30f0725df46725ba48b60843c143d1621bfe-24310215546-1

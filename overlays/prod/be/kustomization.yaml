@@ -5,6 +5,8 @@ resources:
 - secret.yaml
 - ../../../base/be
 
+
+
 patches:
 - patch: |
     - op: replace
@@ -21,3 +23,6 @@ patches:
   target:
     kind: Ingress
     name: reservation-be-ingress
+images:
+- name: scgskku/reservation-be-prod
+  newTag: 27512e844902fbbf3dca9511a5c29edf144d7ea0-24310285264-1

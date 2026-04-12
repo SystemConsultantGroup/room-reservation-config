@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: reservation-prod
+resources:
+- secret.yaml
+- ../../../base/be
+
+patches:
+- patch: |
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: api.reservation.scg.skku.ac.kr
+
+    - op: replace
+      path: /spec/rules/0/host
+      value: api.reservation.scg.skku.ac.kr
+
+    - op: replace
+      path: /metadata/annotations/nginx.ingress.kubernetes.io~1cors-allow-origin
+      value: "https://semi.room.scg.skku.ac.kr"
+  target:
+    kind: Ingress
+    name: reservation-be-ingress

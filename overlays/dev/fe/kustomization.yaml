@@ -5,6 +5,7 @@ resources:
 - secret.yaml
 - ../../../base/fe
 
+
 patches:
 - patch: |
     - op: replace

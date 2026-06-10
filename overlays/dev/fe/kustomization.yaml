@@ -5,6 +5,7 @@ resources:
 - secret.yaml
 - ../../../base/fe
 
+
 patches:
 - patch: |
     - op: replace
@@ -22,4 +23,4 @@ images:
 - name: scgskku/reservation-fe
   newName: scgskku/reservation-fe-dev
 - name: scgskku/reservation-fe-dev
-  newTag: 96af41ddc04c2e0fbc5445b6a0c1e69932e0d2d3-24440706423-1
+  newTag: e99132588ad65a59f3387ccd26c1101e1036fec3-27262358822-1

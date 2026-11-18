@@ -33,4 +33,4 @@ images:
 - name: scgskku/reservation-be
   newName: scgskku/reservation-be-prod
 - name: scgskku/reservation-be-prod
-  newTag: 5d1a1d18cf97a51558daf84e2c601490d206e472-26444060712-1
+  newTag: 5d1a1d18cf97a51558daf84e2c601490d206e472-44266711525-1
